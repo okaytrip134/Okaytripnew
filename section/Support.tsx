@@ -98,7 +98,7 @@ export default function FeaturesSection() {
                                 <img
                                     src="/5.png"
                                     alt="Happy Travelers"
-                                    className="w-full max-w-lg h-auto object-contain relative z-50"
+                                    className="w-full max-w-lg h-auto object-contain relative z-45"
                                 />
 
                                 {/* Yellow Price Badge */}
