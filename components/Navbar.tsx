@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { FiHeart } from "react-icons/fi";
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi";
@@ -13,7 +14,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <div className="flex items-center space-x-2">
+          <Link href="/">
           <img src="/logo/logo.png" alt="OkayTrip" className="h-8 w-auto" />
+          </Link>
         </div>
 
         {/* Right Side */}

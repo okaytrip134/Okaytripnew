@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { Star, Heart, Clock, Users, Phone } from "lucide-react";
+import Link from "next/link";
 
 interface Tour {
   id: number;
@@ -35,7 +36,7 @@ export default function TourCard({ tour }: { tour: Tour }) {
         </button>
 
         {/* Rating Badge (RIGHT SIDE like your image) */}
-        <div className="absolute bottom-5 z-50 right-6 bg-white rounded-full px-4 py-1.5 shadow flex items-center gap-1 text-sm">
+        <div className="absolute bottom-5 z-40 right-6 bg-white rounded-full px-4 py-1.5 shadow flex items-center gap-1 text-sm">
           <Star className="w-4 h-4 text-yellow-400" />
           <span className="font-semibold">{tour.rating}</span>
           <span className="text-gray-500">({tour.reviews} reviews)</span>
@@ -69,9 +70,9 @@ export default function TourCard({ tour }: { tour: Tour }) {
           </p>
 
           <div className="flex items-center gap-3">
-            <button className="bg-[#F97316] hover:bg-[#ea640e] text-white px-6 py-2.5 rounded-full text-sm font-medium">
+            <Link href="/tours" className="bg-[#F97316] hover:bg-[#ea640e] text-white px-6 py-2.5 rounded-full text-sm font-medium">
               Book Now
-            </button>
+            </Link>
             <button className="bg-[#0A143E] text-white p-4 rounded-full hover:bg-[#172A6C] transition">
               <Phone size={18} />
             </button>
